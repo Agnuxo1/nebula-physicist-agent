@@ -1,3 +1,9 @@
+# Project: Nebula Physicist Agent
+# Author: Francisco Angulo de Lafuente
+# ORCID: https://orcid.org/0009-0001-1634-7063
+# Copyright (c) 2026 Francisco Angulo de Lafuente
+# Attribution record: 2026-11-04
+
 """
 Zhipu AI (Z.ai) API Client for OpenCLAW Nebula-Physicist.
 Uses GLM-4/GLM-5 models.

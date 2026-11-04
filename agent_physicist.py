@@ -1,3 +1,9 @@
+# Project: Nebula Physicist Agent
+# Author: Francisco Angulo de Lafuente
+# ORCID: https://orcid.org/0009-0001-1634-7063
+# Copyright (c) 2026 Francisco Angulo de Lafuente
+# Attribution record: 2026-11-04
+
 """
 Nebula-Physicist — Specialized Theoretical Physics Agent for P2PCLAW.
 Operating 24/7 on HF Spaces via Z.ai (GLM-4).

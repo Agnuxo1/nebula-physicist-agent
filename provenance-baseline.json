@@ -1,0 +1,102 @@
+{
+  "project": "Nebula Physicist Agent",
+  "canonical_url": "https://github.com/Agnuxo1/nebula-physicist-agent",
+  "recorded_on": "2026-11-04",
+  "baseline_commit": "616d62cfc24a7d983c4b63edd69c7693169c40e9",
+  "baseline_file_count": 5,
+  "baseline_readme_present": false,
+  "baseline_license_file_present": false,
+  "baseline_github_spdx": null,
+  "files": [
+    {
+      "path": "Dockerfile",
+      "mode": "100644",
+      "git_blob_oid_sha1": "bd7d3ba27d605fae8e6486c48bbf1dba3411e5ca",
+      "bytes": 480,
+      "sha256_raw_git_blob": "a859a11650586049da2c127ec11714ca19fff0e6f25eafdc325dc07d3d431311",
+      "disposition": "attributed_with_native_comment_header"
+    },
+    {
+      "path": "agent_physicist.py",
+      "mode": "100644",
+      "git_blob_oid_sha1": "f68ed200087045d4413cc113574916c1a34d2982",
+      "bytes": 4830,
+      "sha256_raw_git_blob": "77774fa4f9cdaab2995f76fdbed2cc0eee161d2df5a98934554a34d8b3b118b1",
+      "disposition": "attributed_with_native_comment_header"
+    },
+    {
+      "path": "llm_zai.py",
+      "mode": "100644",
+      "git_blob_oid_sha1": "345f80070b7e5b7ef74283bb0fa9c68b4ade1718",
+      "bytes": 2261,
+      "sha256_raw_git_blob": "ea9d20a60c472aa842bb1c29e70ae4219a68f334067f6308a2558410ce43962a",
+      "disposition": "attributed_with_native_comment_header"
+    },
+    {
+      "path": "p2p.py",
+      "mode": "100644",
+      "git_blob_oid_sha1": "3caa82e55335878b9003dfa050938c207e027c7a",
+      "bytes": 5621,
+      "sha256_raw_git_blob": "d23f596aef77ebbe5dd84ddbef1596141fd9715fd380fd60dd3b2417288c9b5c",
+      "disposition": "attributed_with_native_comment_header"
+    },
+    {
+      "path": "requirements.txt",
+      "mode": "100644",
+      "git_blob_oid_sha1": "949fcbd502961400cf0def21f2131ca2270135f0",
+      "bytes": 48,
+      "sha256_raw_git_blob": "a53d713fdcee03cf82ba3ffb0e2ad4c53c6c7f5107b3a5d918147b89d9266e02",
+      "disposition": "attributed_with_native_comment_header"
+    }
+  ],
+  "selected_passages": [
+    {
+      "path": "agent_physicist.py",
+      "lines_1based_in_baseline": [
+        64,
+        72
+      ],
+      "text": "    async def _physics_research_loop(self):\n        while self.running:\n            try:\n                logger.info(\"Starting physics research task...\")\n                prompt = \"Formulate a new theoretical conjecture or a formal derivation related to quantum gravity or dark energy. Include mathematical proofs in LaTeX.\"\n                content = await llm.complete([\n                    {\"role\": \"system\", \"content\": SOUL_PROMPT},\n                    {\"role\": \"user\", \"content\": prompt}\n                ])",
+      "text_sha256_utf8_lf": "91cbc879c7e591f2415776eca6a7724a3123f973b4938eafd451c2674979af0d",
+      "baseline_blob_oid_sha1": "f68ed200087045d4413cc113574916c1a34d2982"
+    },
+    {
+      "path": "agent_physicist.py",
+      "lines_1based_in_baseline": [
+        92,
+        99
+      ],
+      "text": "    async def _social_loop(self):\n        while self.running:\n            try:\n                papers = self.client.get_latest_papers(limit=3)\n                titles = [p.get(\"title\", \"\") for p in papers]\n                \n                prompt = f\"Recent Hive papers: {titles}. Select one and discuss its physical or thermodynamic implications for AGI systems.\"\n                msg = await llm.complete([",
+      "text_sha256_utf8_lf": "ac560fbe7091f08ca2dba16b2b8293632e5667f90b74682e20791d28a0d3a93d",
+      "baseline_blob_oid_sha1": "f68ed200087045d4413cc113574916c1a34d2982"
+    },
+    {
+      "path": "llm_zai.py",
+      "lines_1based_in_baseline": [
+        37,
+        45
+      ],
+      "text": "async def complete(\n    messages: list,\n    max_tokens: int = 4000,\n    temperature: float = 0.7,\n    fast: bool = False,\n) -> str:\n    \"\"\"\n    Asynchronous completion using Zhipu AI (Open API v4).\n    \"\"\"",
+      "text_sha256_utf8_lf": "20986bcfc33307751e196c61398b0441f159d95a8687da3cb963e7e86339ddf7",
+      "baseline_blob_oid_sha1": "345f80070b7e5b7ef74283bb0fa9c68b4ade1718"
+    },
+    {
+      "path": "p2p.py",
+      "lines_1based_in_baseline": [
+        84,
+        91
+      ],
+      "text": "    def publish_paper(self, paper: dict) -> dict:\n        \"\"\"POST /publish-paper.\"\"\"\n        return self._post(\"/publish-paper\", paper, timeout=120.0)\n\n    # ── Mempool / Validation ──────────────────────────────────────────────────\n    def get_mempool(self, limit: int = 20) -> list:\n        try:\n            r = self._http.get(f\"{API_BASE}/mempool\", params={\"limit\": limit})",
+      "text_sha256_utf8_lf": "f283b092f165c1dda1bed86ffea70487c743e5178e73aebdb401f30916d77786",
+      "baseline_blob_oid_sha1": "3caa82e55335878b9003dfa050938c207e027c7a"
+    }
+  ],
+  "attribution_record": {
+    "author": "Francisco Angulo de Lafuente",
+    "orcid": "https://orcid.org/0009-0001-1634-7063",
+    "recorded_on": "2026-11-04",
+    "native_header_candidates": 5,
+    "license_added": false,
+    "native_headers_added": 5
+  }
+}

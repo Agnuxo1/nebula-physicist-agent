@@ -1,0 +1,33 @@
+{
+  "project": "Nebula Physicist Agent",
+  "author": "Francisco Angulo de Lafuente",
+  "orcid": "https://orcid.org/0009-0001-1634-7063",
+  "recorded_on": "2026-11-04",
+  "canonical_url": "https://github.com/Agnuxo1/nebula-physicist-agent",
+  "baseline_commit": "616d62cfc24a7d983c4b63edd69c7693169c40e9",
+  "license_scope": {
+    "baseline_readme_present": false,
+    "baseline_license_file_present": false,
+    "baseline_github_spdx": null,
+    "status": "no_license_present",
+    "new_license_applied": false,
+    "note": "This attribution record grants no license and does not extend terms to dependencies."
+  },
+  "coverage": {
+    "baseline_tracked_paths": 5,
+    "native_comment_headers": 5,
+    "credential_review_held_files": [],
+    "new_attribution_records": [
+      "README.md",
+      "CITATION.cff",
+      "provenance.json",
+      "provenance-baseline.json"
+    ]
+  },
+  "scope_note": "Attribution is limited to this repository's original files; dependencies retain separate authorship and terms.",
+  "security_review": {
+    "literal_credential_candidates_in_baseline": 0,
+    "environment_variable_lookups": 1,
+    "credential_values_recorded": false
+  }
+}
